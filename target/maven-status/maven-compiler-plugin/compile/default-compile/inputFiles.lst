@@ -1,0 +1,10 @@
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/domain/Locadora.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/dao/UsuarioDAO.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/domain/Cliente.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/dao/LocadoraDAO.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/controllers/UsuarioLoginController.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/dao/GeralDAO.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/dao/LocacaoDAO.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/domain/Locacao.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/domain/Usuario.java
+/home/eugenio/DSW/T1/src/main/java/br/ufscar/dc/dsw/dao/ClienteDAO.java
