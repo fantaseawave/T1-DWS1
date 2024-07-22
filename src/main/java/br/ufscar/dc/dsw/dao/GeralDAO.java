@@ -15,9 +15,9 @@ abstract public class GeralDAO {
     }
 
     protected Connection getConnection() throws SQLException {
-        String db_url = "jdbc:mysql://localhost:3306/T1-DSW1";
+        String db_url = "jdbc:mysql://localhost:8080/T1-DSW1";
         try {
-            return DriverManager.getConnection(db_url, "root", "root");
+            return DriverManager.getConnection(db_url, "eugenio", "aA@12345");
         }
         catch(SQLException e) {
             System.out.println("Não foi possível conectar ao BD " + e);

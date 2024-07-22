@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class ClienteDAO extends GeralDAO {
                 String nome = resultSet.getString("nome");
                 String sexo = resultSet.getString("sexo");
                 String telefone = resultSet.getString("telefone");
-                String dataNascimento = resultSet.getString("data_nascimento");
+                Date dataNascimento = resultSet.getDate("data_nascimento");
                 boolean admin = resultSet.getBoolean("isAdmin");
                 boolean isLocadora = resultSet.getBoolean("isLocadora");
 
@@ -65,7 +66,7 @@ public class ClienteDAO extends GeralDAO {
                 boolean isLocadora = resultSet.getBoolean("isLocadora");
                 String sexo = resultSet.getString("sexo");
                 String telefone = resultSet.getString("telefone");
-                String dataNascimento = resultSet.getString("data_nascimento");
+                Date dataNascimento = resultSet.getDate("data_nascimento");
 
                 cliente = new Cliente(id, cpf, email, senha, nome, admin, isLocadora, telefone, sexo, dataNascimento);
             }
@@ -100,7 +101,7 @@ public class ClienteDAO extends GeralDAO {
                 boolean isLocadora = resultSet.getBoolean("isLocadora");
                 String sexo = resultSet.getString("sexo");
                 String telefone = resultSet.getString("telefone");
-                String dataNascimento = resultSet.getString("data_nascimento");
+                Date dataNascimento = resultSet.getDate("data_nascimento");
 
                 cliente = new Cliente(id, CPF, email, senha, nome, admin, isLocadora, telefone, sexo, dataNascimento);
             }
@@ -124,7 +125,7 @@ public class ClienteDAO extends GeralDAO {
             stmt.setString(1, cliente.getDocumento());
             stmt.setString(2, cliente.getSexo());
             stmt.setString(3, cliente.getTelefone());
-            stmt.setString(4, cliente.getDataNascimento());
+            stmt.setDate(4, cliente.getDataNascimento());
             stmt.executeUpdate();
 
             stmt.close();
@@ -143,7 +144,7 @@ public class ClienteDAO extends GeralDAO {
             PreparedStatement stmt = conn.prepareStatement(sqlQuery);
             stmt.setString(1, cliente.getSexo());
             stmt.setString(2, cliente.getTelefone());
-            stmt.setString(3, cliente.getDataNascimento());
+            stmt.setDate(3, cliente.getDataNascimento());
             stmt.setString(4, cliente.getDocumento());
             stmt.executeUpdate();
             

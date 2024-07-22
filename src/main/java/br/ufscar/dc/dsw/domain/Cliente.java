@@ -1,12 +1,14 @@
 package br.ufscar.dc.dsw.domain;
 
+import java.sql.Date;
+
 public class Cliente extends Usuario{
     private String telefone;
     private String sexo;
-    private String dataNascimento;
+    private Date dataNascimento;
 
     public Cliente(int id, String documento, String email, String password, String nome, 
-                    boolean admin, boolean locadora, String telefone, String sexo, String dataNascimento) {
+                    boolean admin, boolean locadora, String telefone, String sexo, Date dataNascimento) {
         super(id, documento, email, password, nome, admin, locadora);
         this.telefone = telefone;
         this.sexo = sexo;
@@ -21,7 +23,7 @@ public class Cliente extends Usuario{
         return this.sexo;
     }
 
-    public String getDataNascimento() {
+    public Date getDataNascimento() {
         return this.dataNascimento;
     }
 
@@ -33,7 +35,7 @@ public class Cliente extends Usuario{
         this.sexo = sexo;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 }
